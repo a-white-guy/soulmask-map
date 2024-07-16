@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Metadata -->
+  <meta name="description" content="Soulmask Interactive Map">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="kregap/awhiteguy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Opengraph and twitter metadata for links -->
+  <meta property="og:title" content="Soulmask Interactive Map">
+  <meta property="og:description" content="Soulmask Interactive Map">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a-white-guy.github.io/soulmask-map/">
+  <meta property="og:image" content="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2646460/capsule_616x353_alt_assets_13.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:site" content="Soulmask Map">
+  <meta name="twitter:title" content="Soulmask Map">
+  <meta name="twitter:description" content="Soulmask Interactive Map">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:src" content="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2646460/capsule_616x353_alt_assets_13.jpg">
+  <meta name="theme-color" content="#16dbe5">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <title>Soulmask Interactive Map</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+    const spreadsheetID = '1VqGhwXqijcW8IdOUzqAyiL4cwO4i17dq_EpX2pRr5rA'
+    const attribution = [
+      `<a href="https://docs.google.com/spreadsheets/d/${spreadsheetID}">Markers</a>`,
+      '<a href="https://github.com/a-white-guy/soulmask-map">Map</a>'
+    ]
+
+    // Map configuration
+    // Pixel to coordinate point scale
+    const x_multiplier = .0012547481926235
+    const y_multiplier = .0012547481926235
+    
+    // Column and row configuration for state without zoom (zoom 0)
+    const column_count = 4
+    const row_count = 4
+    // chunk 0, 0 offset
+    const h_offset = -2
+    const v_offset = -2
+    // map [0, 0] coordinates offset from  uper-left corner of chunk 0, 0
+    const origin_x_offset = 0
+    const origin_y_offset = 0
+
+    const map_start_point_coordinates = [0.0, 0.0]
+    const map_start_point_zoom = 0
+
+    $(function () {
+      $("#includedContent").load("game-map-core/index.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="includedContent"></div>
+</body>
+
+</html>
