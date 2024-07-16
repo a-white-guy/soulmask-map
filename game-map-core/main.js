@@ -127,7 +127,10 @@ const bounds = [
     corner_2[1] - maxBoundsPxOffset / Math.abs(y_multiplier)
   ]
 ]
-const maxBounds = L.latLngBounds(bounds)
+const maxBounds = L.latLngBounds([
+  [-500000.0, -500000.0],
+  [ 500000.0,  500000.0]
+])
 map.setMaxBounds([maxBounds])
 
 map.setView(map_start_point_coordinates, map_start_point_zoom, {animate: false})
