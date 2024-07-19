@@ -31,6 +31,12 @@ button,
   background-clip: padding-box;
 }
 
+.leaflet-control-layers-toggle {
+  width: 75px !important;
+  height: 75px !important;
+  background-size: 40px 40px !important;
+}
+
 button {
   font-weight: bold;
   background-color: #fff;
